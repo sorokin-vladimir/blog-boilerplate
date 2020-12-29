@@ -1,0 +1,8 @@
+{
+  "layout": "layouts/post.njk",
+  "permalink": "posts/{{ title | slug }}/index.html",
+  "author": "Vladimir Sorokin",
+  "tags": [
+    "post"
+  ]
+}

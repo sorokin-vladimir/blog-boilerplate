@@ -1,0 +1,30 @@
+<section>
+	{% for post in postslist | reverse %}
+		<article{% if post.url == url %} data-current="current item"{% endif %}>
+			<h3>
+				<a href="{{ post.url | url }}">
+					{% if post.data.title %}
+						{{ post.data.title }}
+					{% else %}
+						Untitled
+					{% endif %}
+				</a>
+			</h3>
+			{% if post.data.summary %}
+				<p>
+					{{ post.data.summary }}
+				</p>
+			{% endif %}
+			<p>
+				<time datetime="{{ post.date | machineDate }}">
+					{% set author %}{{post.data.author}}{% endset %}
+					<small>{{ post.date | readableDate }} by <a href="/authors/{{ author | slug }}/">{{ post.data.author }}</a></small>
+				</time>
+			</p>
+			{% if post.data.tags %}
+				{% set taglist = post.data.tags %}
+				{% include "components/taglist.njk" %}
+			{% endif %}
+		</article>
+	{% endfor %}
+</section>

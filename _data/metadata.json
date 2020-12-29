@@ -1,0 +1,13 @@
+{
+  "title": "Blog. UpdateMe",
+  "url": "https://example.com",
+  "domain": "example.com",
+  "description": "Just a personal blog. UpdateMe",
+  "author": {
+    "name": "Vladimir Sorokin",
+    "twitterHandle": "sorokin_vl"
+  },
+  "publisher": {
+    "name": "Vladimir Sorokin"
+  }
+}
